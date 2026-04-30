@@ -1,0 +1,39 @@
+export const config = { runtime: "edge" };
+const _0x1f2a = ['\x68\x6f\x73\x74', '\x63\x6f\x6e\x6e\x65\x63\x74\x69\x6f\x6e', '\x6b\x65\x65\x70\x2d\x61\x6c\x69\x76\x65', '\x74\x72\x61\x6e\x73\x66\x65\x72\x2d\x65\x6e\x63\x6f\x64\x69\x6e\x67', '\x78\x2d\x72\x65\x61\x6c\x2d\x69\x70', '\x78\x2d\x66\x6f\x72\x77\x61\x72\x64\x65\x64\x2d\x66\x6f\x72', '\x6d\x61\x6e\x75\x61\x6c', '\x68\x61\x6c\x66', '\x54\x41\x52\x47\x45\x54\x5f\x44\x4f\x4d\x41\x49\x4e'];
+const _0x3e1b = (_0x4c2f) => _0x1f2a[_0x4c2f];
+
+const _0x992d = (process['\x65\x6e\x76'][_0x3e1b(8)] || "")['\x72\x65\x70\x6c\x61\x63\x65'](/\/$/, "");
+const _0x44f1 = new Set([_0x3e1b(0), _0x3e1b(1), _0x3e1b(2), "\x70\x72\x6f\x78\x79\x2d\x61\x75\x74\x68\x65\x6e\x74\x69\x63\x61\x74\x65", "\x74\x65", "\x74\x72\x61\x69\x6c\x65\x72", _0x3e1b(3), "\x75\x70\x67\x72\x61\x64\x65", "\x66\x6f\x72\x77\x61\x72\x64\x65\x64", "\x78\x2d\x66\x6f\x72\x77\x61\x72\x64\x65\x64\x2d\x68\x6f\x73\x74"]);
+
+export default async function (_0x55a1) {
+    if (!_0x992d) return new Response(null, { status: 0x1f4 });
+    
+    try {
+        const _0x77b2 = _0x55a1['\x75\x72\x6c'];
+        const _0x88c1 = _0x77b2['\x69\x6e\x64\x65\x78\x4f\x66']("/", 0x8);
+        const _0xtarget = _0x88c1 === -0x1 ? _0x992d + "/" : _0x992d + _0x77b2['\x73\x6c\x69\x63\x65'](_0x88c1);
+
+        const _0xheaders = new Headers();
+        let _0xip = null;
+
+        for (const [_0xkey, _0xval] of _0x55a1['\x68\x65\x61\x64\x65\x72\x73']) {
+            const _0xlowKey = _0xkey['\x74\x6f\x4c\x6f\x77\x65\x72\x43\x61\x73\x65']();
+            if (_0x44f1['\x68\x61\x73'](_0xlowKey) || _0xlowKey['\x73\x74\x61\x72\x74\x73\x57\x69\x74\x68']("\x78\x2d\x76\x65\x72\x63\x65\x6c")) continue;
+            if (_0xlowKey === _0x3e1b(4)) { _0xip = _0xval; continue; }
+            if (_0xlowKey === _0x3e1b(5)) { if (!_0xip) _0xip = _0xval; continue; }
+            _0xheaders['\x73\x65\x74'](_0xkey, _0xval);
+        }
+        if (_0xip) _0xheaders['\x73\x65\x74'](_0x3e1b(5), _0xip);
+
+        return await fetch(_0xtarget, {
+            method: _0x55a1['\x6d\x65\x74\x68\x6f\x64'],
+            headers: _0xheaders,
+            body: !["\x47\x45\x54", "\x48\x45\x41\x44"]['\x69\x6e\x63\x6c\x75\x64\x65\x73'](_0x55a1['\x6d\x65\x74\x68\x6f\x64']) ? _0x55a1['\x62\x6f\x64\x79'] : undefined,
+            duplex: _0x3e1b(7),
+            redirect: _0x3e1b(6)
+        });
+    } catch (_0xerr) {
+        return new Response(null, { status: 0x1f6 });
+    }
+}
+
