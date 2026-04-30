@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "routes": [
+    {
+      "src": "/(?<target>.*)",
+      "dest": "/api/index?path=$target",
+      "headers": {
+        "x-robots-tag": "noindex"
+      }
+    }
+  ]
+}
+
